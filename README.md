@@ -1,13 +1,10 @@
+# Making Your Own Simple MPEG-DASH Server (Windows 10)
 # Step 1: Installing the Software
-Download the test movie file  "https://download.blender.org/peach/bigbuckbunny_movies/"
-#
-Download ffmpeg from "https://www.videohelp.com/software?d=ffmpeg-4.4-full_build.7z"
-#
-Download the latest installer of GPAC from "https://gpac.wp.imt.fr/downloads/gpac-nightly-builds/"
-# 
-Extract the downloaded ffmpeg zip file to "c:\ffmpeg"
-#
-Navigate to the "bin" folder under c:\ffmpeg and copy the address using Ctrl+C
+1. Download the test movie file or any video used 
+2. Download ffmpeg from "https://www.videohelp.com/software?d=ffmpeg-4.4-full_build.7z"
+3. Download the latest installer of GPAC from "https://gpac.wp.imt.fr/downloads/gpac-nightly-builds/"
+* Extract the downloaded ffmpeg zip file to "c:\ffmpeg"
+* Navigate to the "bin" folder under c:\ffmpeg and copy the address using Ctrl+C
 # Step 2: Testing the Programs
 1. ffmpeg
 2. mp4box
