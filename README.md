@@ -27,8 +27,6 @@ mp4box -dash 5000 -rap -profile dashavc264:onDemand -mpd-title BBB -out manifest
 # Step 10: Adding the DASH MIME Type using golang
 # Step 11: Setting Up Your Network using golang
 # Step 12: Streaming the Video
-VLC media Player
-#
-Go to Media-> Open Location from clipboard-> Then enter url-> play
-#
-Successfully play your video
+* VLC media Player
+* Go to Media-> Open Location from clipboard-> Then enter url-> play
+* Successfully play your video
