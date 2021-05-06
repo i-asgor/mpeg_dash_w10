@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Dash.js Rocks</title>
+        <style>
+            video {
+                width: 640px;
+                height: 360px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <video id="videoPlayer" type="application/x-mpegURL" controls autoplay="true"></video>
+        </div>
+
+        <script src="/resources/dash.all.min.js"></script>
+        <script src="/resources/dash.all.debug.js"></script>
+      <script>
+            (function(){
+                var url = "http://localhost:8080/online/manifest.mpd";
+                var player = dashjs.MediaPlayer().create();
+                player.initialize(document.querySelector("#videoPlayer"), url, true);
+            })();
+        </script> 
+
+         
+
+        <!--  <script>
+        (function(){
+        // var url = "https://dash.akamaized.net/envivio/EnvivioDash3/manifest.mpd";
+        var url = "http://localhost:8080/manifest.mpd";
+        var player = dashjs.MediaPlayer().create();
+        // config
+        targetLatency = 2.0;        // Lowering this value will lower latency but may decrease the player's ability to build a stable buffer.
+        minDrift = 0.05;            // Minimum latency deviation allowed before activating catch-up mechanism.
+        catchupPlaybackRate = 0.5;  // Maximum catch-up rate, as a percentage, for low latency live streams.
+        stableBuffer = 2;           // The time that the internal buffer target will be set to post startup/seeks (NOT top quality).
+        bufferAtTopQuality = 2;     // The time that the internal buffer target will be set to once playing the top quality.
+
+     player.updateSettings({
+      'streaming': {
+          'liveDelay': 2,
+          'liveCatchUpMinDrift': 0.05,
+          'liveCatchUpPlaybackRate': 0.5,
+          'stableBufferTime': 2,
+          'bufferTimeAtTopQuality': 2,
+          'bufferTimeAtTopQualityLongForm': 2,
+          'bufferToKeep': 2,
+          'bufferAheadToKeep': 2,
+          'lowLatencyEnabled': true,
+          'fastSwitchEnabled': true,
+          'abr': {
+               'limitBitrateByPortal': true
+          },
+       }
+   });
+
+   console.log(player.getSettings());
+
+   setInterval(() => {
+      console.log('Live latency= ', player.getCurrentLiveLatency());
+      console.log('Buffer length= ', player.getBufferLength('video'));
+     }, 3000);
+
+     player.initialize(document.querySelector("#videoPlayer"), url, true);
+
+   })();
+</script>-->
+
+        
+       
+    </body>
+</html>

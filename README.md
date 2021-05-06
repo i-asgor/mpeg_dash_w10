@@ -1,10 +1,13 @@
-# Making Your Own Simple MPEG-DASH Server (Windows 10)
 # Step 1: Installing the Software
-1. Download the test movie file or any video used 
-2. Download ffmpeg from "https://www.videohelp.com/software?d=ffmpeg-4.4-full_build.7z"
-3. Download the latest installer of GPAC from "https://gpac.wp.imt.fr/downloads/gpac-nightly-builds/"
-* Extract the downloaded ffmpeg zip file to "c:\ffmpeg"
-* Navigate to the "bin" folder under c:\ffmpeg and copy the address using Ctrl+C
+Download the test movie file  "https://download.blender.org/peach/bigbuckbunny_movies/"
+#
+Download ffmpeg from "https://www.videohelp.com/software?d=ffmpeg-4.4-full_build.7z"
+#
+Download the latest installer of GPAC from "https://gpac.wp.imt.fr/downloads/gpac-nightly-builds/"
+# 
+Extract the downloaded ffmpeg zip file to "c:\ffmpeg"
+#
+Navigate to the "bin" folder under c:\ffmpeg and copy the address using Ctrl+C
 # Step 2: Testing the Programs
 1. ffmpeg
 2. mp4box
@@ -27,6 +30,6 @@ mp4box -dash 5000 -rap -profile dashavc264:onDemand -mpd-title BBB -out manifest
 # Step 10: Adding the DASH MIME Type using golang
 # Step 11: Setting Up Your Network using golang
 # Step 12: Streaming the Video
-* VLC media Player
-* Go to Media-> Open Location from clipboard-> Then enter url-> play
-* Successfully play your video
+VLC media Player
+Go to Media-> Open Location from clipboard-> Then enter url-> play
+Successfully play your video
