@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Dash.js Rocks</title>
+        <title>MASTER ACADEMY</title>
         <style>
             video {
                 width: 640px;
@@ -11,18 +11,21 @@
     </head>
     <body>
         <div>
-            <video id="videoPlayer" type="application/x-mpegURL" controls autoplay="true"></video>
+            <video id="videoPlayer" type="application/dash+xml" controls autoplay="true"></video>
         </div>
 
         <script src="/resources/dash.all.min.js"></script>
-        <script src="/resources/dash.all.debug.js"></script>
-      <script>
+        <script>
             (function(){
-                var url = "http://localhost:8080/online/manifest.mpd";
+                //var url = "http://localhost:8080/online/manifest.mpd";
+                var url = "http://localhost:8080/manifest.mpd";
                 var player = dashjs.MediaPlayer().create();
                 player.initialize(document.querySelector("#videoPlayer"), url, true);
             })();
-        </script> 
+        </script>       
+    </body>
+</html>        
+      
 
          
 
@@ -66,9 +69,4 @@
      player.initialize(document.querySelector("#videoPlayer"), url, true);
 
    })();
-</script>-->
-
-        
-       
-    </body>
-</html>
+</script>-->   
