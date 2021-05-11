@@ -1,0 +1,10 @@
+func ScanDir(path string) ([]MovieDirInfo, error){
+    var listMovie []MovieDirInfo
+    listItems, _ := ioutil.ReadDir(path)
+
+    for _, item := range listItems {
+        detectedMovies, _ :=Identify(path, item)
+        listMovie = append(listMovie, detectedMovies...)
+    }
+    return listMovie, nil
+}

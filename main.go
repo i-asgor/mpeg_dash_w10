@@ -20,9 +20,11 @@ func addHeaders(h http.Handler) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Access-Control-Allow-Methods", "GET, OPTION, HEAD, PATCH, PUT, OST, DELETE")
 		w.Header().Set("Access-Control-Allow-Origin", "*")
-		w.Header().Set("Access-Control-Allow-Headers", "Range")
+		w.Header().Set("Access-Control-Expose-Headers", "Server,range,Content-Length,Content-Range")
+		w.Header().Set("Access-Control-Allow-Headers", "range,x-requested-with, Content-Type, origin, authorization, accept, client-security-token")
 		w.Header().Set("Content-Type", "video/mp4")
-		// w.Header().Set("mimetype", "application/dash+xml")
+		w.Header().Set("mimetype", "application/dash+xml")
+		w.Header().Set("Access-Control-Max-Age", "1000")
 		h.ServeHTTP(w, r)
 	}
 }
